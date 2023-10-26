@@ -33,7 +33,7 @@
 // 一层子模块
 mod one_layer {
     pub fn print_characters() {
-        for c in b'a'..=b'Z' {
+        for c in b'Z'..=b'a' {
             println!("{}", c as char);
         }
     }
@@ -67,6 +67,21 @@ cargo run
 
 ```
 >输出
+> one_layer::print_characters() 输出:
+```
+Z
+[
+\
+]
+^
+_
+`
+a
+
+```
+
+> two_layer::print_characters()输出:
+```
 A
 B
 C
@@ -125,3 +140,4 @@ w
 x
 y
 z
+```
